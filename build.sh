@@ -14,6 +14,7 @@ python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade -r requirements.txt
 
 # Create the binary
+pyinstaller -v
 pyinstaller --onefile --windowed main.py
 
 # deactivate the virtual env at the end
