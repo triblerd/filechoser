@@ -1,6 +1,10 @@
 import sys
 
 from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog, QLabel, QVBoxLayout
+import gi
+
+gi.require_version('GdkPixbuf', '2.0')
+from gi.repository import GdkPixbuf
 
 
 class App(QWidget):
@@ -15,6 +19,8 @@ class App(QWidget):
         self.init_ui()
 
     def init_ui(self):
+        pixbuf = GdkPixbuf.Pixbuf.new_from_file('hello.png')
+
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
 

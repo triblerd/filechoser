@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 echo "Creating a new venv"
 python3 -m venv build-env
 . ./build-env/bin/activate
